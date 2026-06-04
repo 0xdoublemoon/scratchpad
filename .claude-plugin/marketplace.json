@@ -1,0 +1,26 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "doublemoon-skills",
+  "version": "1.0.0",
+  "description": "Custom Claude Code skills marketplace",
+  "owner": {
+    "name": "0xdoublemoon"
+  },
+  "plugins": [
+    {
+      "name": "svg-logo",
+      "description": "Create a high-quality SVG logo file based on a description",
+      "path": "svg-logo/svg-logo.md"
+    },
+    {
+      "name": "svg-flowchart",
+      "description": "Generate a production-ready SVG flowchart or process diagram",
+      "path": "svg-flowchart/svg-flowchart.md"
+    },
+    {
+      "name": "svg-illustration",
+      "description": "Generate a production-ready SVG illustration or scene",
+      "path": "svg-illustration/svg-illustration.md"
+    }
+  ]
+}
