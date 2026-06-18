@@ -1,8 +1,0 @@
-{
-  "name": "svg-logo",
-  "description": "Generate a production-ready SVG logo mark — icon only, no text, with optional animation.",
-  "version": "1.0.0",
-  "author": {
-    "name": "0xdoublemoon"
-  }
-}

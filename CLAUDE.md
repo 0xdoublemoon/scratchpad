@@ -4,41 +4,33 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This repository is a Claude Code plugin marketplace — it contains three SVG generation skills distributed as installable plugins. There is no build system, test runner, or application to run; the "code" is the skill definition files themselves.
+This repository is a Claude Code plugin marketplace — it contains a single `svg` plugin with three SVG generation skills. There is no build system, test runner, or application to run; the "code" is the skill definition files themselves.
 
 ## Repository Structure
 
 ```
 .claude-plugin/
-  marketplace.json          # Marketplace catalog listing all three plugins
-svg-logo/
+  marketplace.json          # Marketplace catalog listing the svg plugin
+svg/
   .claude-plugin/
-    plugin.json             # Plugin manifest for svg-logo
+    plugin.json             # Plugin manifest (name: "svg")
   skills/
-    svg-logo/
-      SKILL.md              # Skill definition
-svg-flowchart/
-  .claude-plugin/
-    plugin.json
-  skills/
-    svg-flowchart/
-      SKILL.md
-svg-illustration/
-  .claude-plugin/
-    plugin.json
-  skills/
-    svg-illustration/
-      SKILL.md
+    logo/
+      SKILL.md              # SVG logo mark skill
+    flowchart/
+      SKILL.md              # SVG flowchart skill
+    illustration/
+      SKILL.md              # SVG illustration skill
 outputs/                    # Sample/test SVG output (not part of skill definitions)
 ```
 
 ## Plugin Manifest Format
 
-Each plugin has a `.claude-plugin/plugin.json`:
+`.claude-plugin/plugin.json` defines the plugin:
 
 ```json
 {
-  "name": "svg-logo",
+  "name": "svg",
   "description": "...",
   "version": "1.0.0",
   "author": { "name": "0xdoublemoon" }
@@ -47,19 +39,17 @@ Each plugin has a `.claude-plugin/plugin.json`:
 
 ## Marketplace Catalog
 
-`.claude-plugin/marketplace.json` lists all plugins with their local source paths:
+`.claude-plugin/marketplace.json` lists the plugin with its source path:
 
 ```json
 {
   "name": "doublemoon-skills",
   "owner": { "name": "0xdoublemoon" },
   "plugins": [
-    { "name": "svg-logo", "source": "./svg-logo", "description": "..." }
+    { "name": "svg", "source": "./svg", "description": "..." }
   ]
 }
 ```
-
-**Every plugin directory must be listed here with a `source` field.**
 
 ## Skill File Format
 
@@ -73,7 +63,7 @@ description: >
 ---
 ```
 
-The skill name comes from the directory name (e.g. `skills/svg-logo/` → `svg-logo`), not from a `name:` field. Do not add `name:` to the frontmatter.
+The skill name comes from the directory name (e.g. `skills/logo/` → `/svg:logo`). Do not add `name:` to the frontmatter.
 
 The body describes how Claude should execute the skill — canvas specs, step-by-step generation instructions, output naming conventions, etc.
 
@@ -83,10 +73,10 @@ Generated SVG files are saved to `./outputs/{name}-{type}.svg` (e.g. `outputs/br
 
 ## SVG Skill Defaults
 
-| Skill | Canvas | Center |
-|---|---|---|
-| `svg-logo` | 100×100, safe zone 6,6→94,94 | 50,50 |
-| `svg-flowchart` | 800px wide, height computed | — |
-| `svg-illustration` | 400×300 default (landscape) | — |
+| Skill | Invocation | Canvas | Center |
+|---|---|---|---|
+| logo | `/svg:logo` | 100×100, safe zone 6,6→94,94 | 50,50 |
+| flowchart | `/svg:flowchart` | 800px wide, height computed | — |
+| illustration | `/svg:illustration` | 400×300 default (landscape) | — |
 
-When modifying animation coordinates in `svg-logo`, the breathe `transform-origin` and spin rotation center must both reference `50px 50px` / `50 50`.
+When modifying animation coordinates in the logo skill, the breathe `transform-origin` and spin rotation center must both reference `50px 50px` / `50 50`.

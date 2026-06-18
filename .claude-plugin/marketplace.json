@@ -5,19 +5,9 @@
   },
   "plugins": [
     {
-      "name": "svg-logo",
-      "source": "./svg-logo",
-      "description": "Generate a production-ready SVG logo mark — icon only, no text, with optional animation."
-    },
-    {
-      "name": "svg-flowchart",
-      "source": "./svg-flowchart",
-      "description": "Generate a production-ready SVG flowchart or process diagram (800px wide, auto height)."
-    },
-    {
-      "name": "svg-illustration",
-      "source": "./svg-illustration",
-      "description": "Generate a production-ready SVG illustration or scene (400×300 default canvas)."
+      "name": "svg",
+      "source": "./svg",
+      "description": "SVG generation skills: logo marks, flowcharts, and illustrations."
     }
   ]
 }
