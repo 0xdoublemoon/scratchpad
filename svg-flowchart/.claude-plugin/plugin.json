@@ -1,0 +1,8 @@
+{
+  "name": "svg-flowchart",
+  "description": "Generate a production-ready SVG flowchart or process diagram (800px wide, auto height).",
+  "version": "1.0.0",
+  "author": {
+    "name": "0xdoublemoon"
+  }
+}

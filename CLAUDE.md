@@ -4,32 +4,76 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This repository is a Claude Code plugin marketplace — it contains custom Claude Code skills distributed as a plugin package. There is no build system, test runner, or application to run; the "code" is the skill definition files themselves.
+This repository is a Claude Code plugin marketplace — it contains three SVG generation skills distributed as installable plugins. There is no build system, test runner, or application to run; the "code" is the skill definition files themselves.
 
-## Plugin Structure
-
-Skills are defined as Markdown files with YAML frontmatter and registered in `.claude-plugin/marketplace.json`. Each skill lives in its own directory:
+## Repository Structure
 
 ```
-svg-logo/svg-logo.md
-svg-flowchart/svg-flowchart.md
-svg-illustration/svg-illustration.md
+.claude-plugin/
+  marketplace.json          # Marketplace catalog listing all three plugins
+svg-logo/
+  .claude-plugin/
+    plugin.json             # Plugin manifest for svg-logo
+  skills/
+    svg-logo/
+      SKILL.md              # Skill definition
+svg-flowchart/
+  .claude-plugin/
+    plugin.json
+  skills/
+    svg-flowchart/
+      SKILL.md
+svg-illustration/
+  .claude-plugin/
+    plugin.json
+  skills/
+    svg-illustration/
+      SKILL.md
+outputs/                    # Sample/test SVG output (not part of skill definitions)
 ```
 
-**Registration:** Every skill directory and path must be listed in `.claude-plugin/marketplace.json` under `"plugins"`. A skill file that isn't registered will not be recognized by Claude Code.
+## Plugin Manifest Format
+
+Each plugin has a `.claude-plugin/plugin.json`:
+
+```json
+{
+  "name": "svg-logo",
+  "description": "...",
+  "version": "1.0.0",
+  "author": { "name": "0xdoublemoon" }
+}
+```
+
+## Marketplace Catalog
+
+`.claude-plugin/marketplace.json` lists all plugins with their local source paths:
+
+```json
+{
+  "name": "doublemoon-skills",
+  "owner": { "name": "0xdoublemoon" },
+  "plugins": [
+    { "name": "svg-logo", "source": "./svg-logo", "description": "..." }
+  ]
+}
+```
+
+**Every plugin directory must be listed here with a `source` field.**
 
 ## Skill File Format
 
-Each `*.md` skill file must begin with YAML frontmatter:
+Each `SKILL.md` begins with YAML frontmatter:
 
 ```yaml
 ---
-name: skill-name          # must match the "name" field in marketplace.json
 description: >
   One-paragraph description used for skill matching and triggering.
   Include trigger phrases here so Claude knows when to invoke this skill.
 ---
 ```
+
+The skill name comes from the directory name (e.g. `skills/svg-logo/` → `svg-logo`), not from a `name:` field. Do not add `name:` to the frontmatter.
 
 The body describes how Claude should execute the skill — canvas specs, step-by-step generation instructions, output naming conventions, etc.
 

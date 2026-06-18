@@ -1,0 +1,8 @@
+{
+  "name": "svg-illustration",
+  "description": "Generate a production-ready SVG illustration or scene (400×300 default canvas).",
+  "version": "1.0.0",
+  "author": {
+    "name": "0xdoublemoon"
+  }
+}
