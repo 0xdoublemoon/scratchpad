@@ -21,6 +21,14 @@ svg/
       SKILL.md              # SVG flowchart skill
     illustration/
       SKILL.md              # SVG illustration skill
+stock/
+  .claude-plugin/
+    plugin.json             # Plugin manifest (name: "stock")
+  skills/
+    analysis/
+      SKILL.md              # US stock analysis skill
+    screener/
+      SKILL.md              # Stock screener skill
 outputs/                    # Sample/test SVG output (not part of skill definitions)
 ```
 
@@ -78,5 +86,7 @@ Generated SVG files are saved to `./outputs/{name}-{type}.svg` (e.g. `outputs/br
 | logo | `/svg:logo` | 100×100, safe zone 6,6→94,94 | 50,50 |
 | flowchart | `/svg:flowchart` | 800px wide, height computed | — |
 | illustration | `/svg:illustration` | 400×300 default (landscape) | — |
+| analysis | `/stock:analysis` | US stock Buy/Hold/Sell report | — |
+| screener | `/stock:screener` | US stock screener | — |
 
 When modifying animation coordinates in the logo skill, the breathe `transform-origin` and spin rotation center must both reference `50px 50px` / `50 50`.

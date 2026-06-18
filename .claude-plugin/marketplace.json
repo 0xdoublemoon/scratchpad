@@ -8,6 +8,11 @@
       "name": "svg",
       "source": "./svg",
       "description": "SVG generation skills: logo marks, flowcharts, and illustrations."
+    },
+    {
+      "name": "stock",
+      "source": "./stock",
+      "description": "US stock analysis and screening skills powered by IBKR MCP and web search."
     }
   ]
 }
