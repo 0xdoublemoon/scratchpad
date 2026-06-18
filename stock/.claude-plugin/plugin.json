@@ -1,0 +1,8 @@
+{
+  "name": "stock",
+  "description": "US stock analysis and screening skills powered by IBKR MCP and web search.",
+  "version": "1.0.0",
+  "author": {
+    "name": "0xdoublemoon"
+  }
+}

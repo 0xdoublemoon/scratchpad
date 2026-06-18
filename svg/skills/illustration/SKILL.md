@@ -1,5 +1,4 @@
 ---
-name: svg-illustration
 description: >
   Generate a production-ready SVG illustration (400×300 default canvas).
   Use this skill whenever the user asks to draw, illustrate, or create a scene, concept art, spot art,
