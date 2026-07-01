@@ -1,0 +1,13 @@
+{
+  "name": "book-to-skill-dev",
+  "owner": {
+    "name": "Doublemoon"
+  },
+  "plugins": [
+    {
+      "name": "book-to-skill",
+      "source": "./",
+      "description": "Convert a non-fiction EPUB into a two-tier Claude Code skill."
+    }
+  ]
+}

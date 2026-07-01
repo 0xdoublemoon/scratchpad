@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <title>Claude Code</title>
+  <desc>Terminal prompt mark — geometric logo for Claude Code CLI</desc>
+
+  <!-- Background: rounded square, Ember dark -->
+  <rect x="8" y="8" width="84" height="84" rx="20" fill="#7C2D12"/>
+
+  <!-- Subtle inner shadow ring -->
+  <rect x="8" y="8" width="84" height="84" rx="20"
+    fill="none" stroke="#5a1e08" stroke-width="3" opacity="0.6"/>
+
+  <!-- Terminal chevron > -->
+  <polyline
+    points="27,34 51,50 27,66"
+    fill="none"
+    stroke="#FB923C"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <!-- Cursor block -->
+  <rect x="57" y="43" width="15" height="14" rx="2" fill="#FB923C"/>
+</svg>
