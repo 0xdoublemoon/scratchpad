@@ -1,0 +1,19 @@
+{
+  "name": "book-to-skill",
+  "version": "0.1.0",
+  "description": "Two-tier knowledge skills for Claude Code. Ships 'book-to-skill' (convert a non-fiction EPUB into a two-tier skill: an always-loaded concept map plus on-demand per-chapter toolkits) and 'second-brain', an example skill generated from Building a Second Brain (CODE + PARA).",
+  "author": {
+    "name": "Doublemoon"
+  },
+  "license": "MIT",
+  "keywords": [
+    "epub",
+    "skill-generator",
+    "knowledge-management",
+    "book",
+    "distillation",
+    "progressive-disclosure",
+    "second-brain",
+    "pkm"
+  ]
+}
