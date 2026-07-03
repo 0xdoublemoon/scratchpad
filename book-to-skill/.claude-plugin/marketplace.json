@@ -7,7 +7,7 @@
     {
       "name": "book-to-skill",
       "source": "./",
-      "description": "Convert a non-fiction EPUB into a two-tier Claude Code skill."
+      "description": "Convert a non-fiction EPUB (or an author's whole body of work) into a progressive-disclosure Claude Code skill."
     }
   ]
 }
