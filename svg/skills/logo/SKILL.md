@@ -1,5 +1,4 @@
 ---
-name: svg-logo
 description: >
   Generate a production-ready SVG logo mark (50×50, icon only, no text).
   Use this skill whenever the user asks to create a logo, icon, brand mark, app icon, or favicon.

@@ -1,5 +1,4 @@
 ---
-name: svg-flowchart
 description: >
   Generate a production-ready SVG flowchart or process diagram (800px wide, auto height).
   Use this skill whenever the user asks to diagram, map, or visualize a process, workflow, decision tree,
